@@ -1,0 +1,45 @@
+{
+  "name": "dsh-rose-crystal",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "A rose-crystal theme for DeepSeek Harness made for those who love soft pink: blush pink-white gradients, jelly keycaps, a black cat-paw send button, cat-ear composer, bows and sparkles.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "pink",
+    "rose",
+    "cute",
+    "cat"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
